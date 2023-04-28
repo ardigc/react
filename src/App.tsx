@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles.css';
 import Calc from './Calc';
+import Calcfull from './CalcFull';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -36,6 +37,7 @@ function App() {
             
             </div>
             <Calc />
+            <Calcfull />
         </div>
         
     );

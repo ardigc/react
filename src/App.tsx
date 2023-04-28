@@ -1,5 +1,6 @@
-import { ChangeEventHandler, useState } from 'react';
+import { useState } from 'react';
 import './styles.css';
+import Calc from './Calc';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -20,20 +21,23 @@ function App() {
         }
     };
 
-    const changeHandler: ChangeEventHandler<HTMLInputElement> = (ev) => {
-        ev.target.value
-    }
+ 
 
     return (
         <div>
+            <div>
+
             <button onClick={clickHandlersub} className='button'>sub</button>
             <span style={{ fontSize: '2rem' }}>{number}</span>
             <button onClick={clickHandler} className="button">
                 Up
             </button>
-            <span style={{ fontSize: '2rem' }}>{number}</span>
-            <input onChange={changeHandler} />
+   
+            
+            </div>
+            <Calc />
         </div>
+        
     );
 }
 

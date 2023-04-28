@@ -5,15 +5,28 @@ function App() {
     const [number, setNumber] = useState(0);
 
     const clickHandler = () => {
-      setNumber(number + 1)
+        if (number>=20) {
+            
+        } else {
+            setNumber(number + 1)      
+        }
+    };
+    const clickHandlersub = () => {
+        if (number<=0) {
+            
+        } else {
+            
+            setNumber(number - 1)
+        }
     };
 
     return (
         <div>
-            <button onClick={clickHandler} className="button">
-                Click me
-            </button>
+            <button onClick={clickHandlersub} className='button'>sub</button>
             <span style={{ fontSize: '2rem' }}>{number}</span>
+            <button onClick={clickHandler} className="button">
+                Up
+            </button>
         </div>
     );
 }

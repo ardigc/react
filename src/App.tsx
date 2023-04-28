@@ -26,7 +26,7 @@ function App() {
 
     return (
         <div>
-            <div>
+            {/* <div>
 
             <button onClick={clickHandlersub} className='button'>sub</button>
             <span style={{ fontSize: '2rem' }}>{number}</span>
@@ -35,8 +35,8 @@ function App() {
             </button>
    
             
-            </div>
-            <Calc />
+            </div> */}
+            {/* <Calc /> */}
             <Calcfull />
         </div>
         

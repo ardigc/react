@@ -7,10 +7,15 @@
   grid-template-rows: repeat(8, 1fr);
   background-color: aliceblue;
   grid-template-areas: "a a a a"
-                        "b b b b"
-                        "c d e f"
-                        "g h i j"
-                        "num num num k"
-                        "num num num l"
-                        "num num num m";
+                        "b b b b";
+}
+.prev{
+  display: flex;
+  grid-area: a;
+  justify-content: flex-end;
+}
+.result{
+  display: flex;
+  grid-area: b;
+  justify-content: flex-end;
 }

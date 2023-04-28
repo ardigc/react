@@ -1,26 +1,26 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './styles.css';
-import Calc from './Calc';
+// import Calc from './Calc';
 import Calcfull from './CalcFull';
 
 function App() {
-    const [number, setNumber] = useState(0);
+//     const [number, setNumber] = useState(0);
 
-    const clickHandler = () => {
-        if (number>=20) {
+//     const clickHandler = () => {
+//         if (number>=20) {
             
-        } else {
-            setNumber(number + 1)      
-        }
-    };
-    const clickHandlersub = () => {
-        if (number<=0) {
+//         } else {
+//             setNumber(number + 1)      
+//         }
+//     };
+//     const clickHandlersub = () => {
+//         if (number<=0) {
             
-        } else {
+//         } else {
             
-            setNumber(number - 1)
-        }
-    };
+//             setNumber(number - 1)
+//         }
+//     };
 
  
 

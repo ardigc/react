@@ -31,7 +31,7 @@ function Calcfull() {
   const [number, setNumber] = useState(0);
   const prevNumber = 0;
   function clickHandler(num: string, index: number) {
-    console.log(num);
+    console.log(num, index);
   }
   return (
     <div className="calc-box">

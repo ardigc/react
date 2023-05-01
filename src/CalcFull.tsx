@@ -26,7 +26,7 @@ const buttons = [
   ",",
   "=",
 ];
-const num1Arr: string[]=[]
+let num1Arr: string[]=[]
 
 function Calcfull() {
   const [number, setNumber] = useState(0);
@@ -38,6 +38,14 @@ function Calcfull() {
       const num2Arr = num1Arr.push(num)
       setNumber(parseInt(num1Arr.join('')))
       console.log(num1Arr)
+    }else if(index===3) {
+      console.log(num, index);
+      const num2Arr = num1Arr.pop()
+      setNumber(parseInt(num1Arr.join('')))
+    }else if(index===2) {
+      console.log(num, index);
+      num1Arr = []
+      setNumber(0)
     } else {
       console.log("es un simbolo")  
       console.log(num, index);

@@ -146,13 +146,20 @@ function Calcfull() {
       console.log(num, index);
     }
   }
+  // var myArr = String(number).split("").map((number)=>{
+  //   return Number(number)
+  // })
+  // if (myArr.length>16) {
+  //   console.log(myArr)
+  //   console.log("numero largo")
+  // }
   // let myFunc = (nume: any) => Number(nume);
   
   // const intArr = Array.from(String(number), myFunc);
   // console.log(intArr)
   // if (intArr.length>16) {
   //   console.log("numero largo")
-  }
+  // }
   return (
     <div className="calc-box">
       <div className="result">{number}</div>

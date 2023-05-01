@@ -47,11 +47,16 @@ function Calcfull() {
       const num2Arr = num1Arr.push(".")
       console.log(num1Arr.join(''))
       setNumber(parseFloat(num1Arr.join('')))
-    }else if(index===22) {
+    }else if(index===20) {
       console.log(num, index);
-      const num2Arr = num1Arr.push("-")
-      console.log(num1Arr.join(''))
-      setNumber(parseFloat(num1Arr.join('')))
+      if (num1Arr[0]==="-") {
+        const num2Arr = num1Arr.splice(0,1)
+        setNumber(parseFloat(num1Arr.join('')))
+      } else {
+        const num2Arr = num1Arr.unshift("-")
+        console.log(num1Arr.join(''))
+        setNumber(parseFloat(num1Arr.join('')))
+      }
     }else if(index===2) {
       console.log(num, index);
       num1Arr = []

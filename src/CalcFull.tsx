@@ -27,10 +27,11 @@ const buttons = [
   "=",
 ];
 let num1Arr: string[]=[]
+let num1: number=0
 
 function Calcfull() {
   const [number, setNumber] = useState(0);
-  const prevNumber = 0;
+  let prevNumber = 0;
   function clickHandler(num: string, index: number) {
     if (index === 8||index===9||index===10||index===12||index===13||index===14||index===16||index===17||index===18||index===21) {
       console.log("es un numero")
@@ -46,6 +47,11 @@ function Calcfull() {
       console.log(num, index);
       num1Arr = []
       setNumber(0)
+    }else if(index===19) {
+      console.log(num, index);
+      num1=number
+      prevNumber=number
+      setNumber(parseInt(num1Arr.join('')))
     } else {
       console.log("es un simbolo")  
       console.log(num, index);

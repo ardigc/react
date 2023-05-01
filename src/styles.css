@@ -3,8 +3,16 @@
 }
 .calc-box{
   display: grid;
+  width: 25rem;
+  height: 30rem;
+  border: solid 1px black;
+  box-shadow:
+  0 0  0 2px rgb(255,255,255),
+  0.5em 0.5em 1em rgba(0,0,0,0.3);
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: 0.5fr repeat(7, 1fr);
+  overflow: hidden;
+  text-overflow: clip;
   background-color: aliceblue;
   grid-template-areas: "a a a a"
                         "b b b b";
@@ -18,4 +26,11 @@
   display: flex;
   grid-area: b;
   justify-content: flex-end;
+}
+.result{
+  font-size: 3rem;
+}
+.prev{
+  font-size: 1.5rem;
+  color: rgb(148, 151, 148)
 }

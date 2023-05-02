@@ -207,7 +207,7 @@ function Calcfull() {
       {buttons.map((number, index) => (
         <button
           key={index}
-          className={"numer-" + index}
+          className={"numer-" + index+" buttons"}
           onClick={() => clickHandler(`${number}`, index)}
         >
           {number}

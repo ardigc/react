@@ -63,10 +63,12 @@ function Calcfull() {
     } else if (index === 1) {
       console.log(num, index);
       num1Arr = []
+      // operation="."
       setNumber(0)
     } else if (index === 2) {
       console.log(num, index);
       num1Arr = []
+      operation="."
       setNumber(0)
       setPrevNumber('0')
       num1 = 0

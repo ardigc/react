@@ -2,7 +2,7 @@
 import './styles.css';
 // import Calc from './Calc';
 import Calcfull from './CalcFull';
-import { Component, InnerComponent } from './Comp';
+// import { Component, InnerComponent } from './Comp';
 
 function App() {
   //     const [number, setNumber] = useState(0);
@@ -23,7 +23,7 @@ function App() {
   //         }
   //     };
 
-  const button = <button>El tronchas</button>
+  // const button = <button>El tronchas</button>
 
   return (
     <div>
@@ -39,12 +39,12 @@ function App() {
             </div> */}
       {/* <Calc /> */}
       <Calcfull />
-      <Component message="Un mensaje" >
+      {/* <Component message="Un mensaje" >
         <h4>Hola que pasa</h4>
       </Component>
       <Component message="Adri el canutos" jsx={<span>El mingas</span>}>
         <InnerComponent button={button} />
-      </Component>
+      </Component> */}
     </div>
 
   );

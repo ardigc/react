@@ -173,40 +173,40 @@ function Calcfull() {
     }
   }
   
-  function redondearNumero(numero: number) {
-    const strNum = numero.toString()
-    console.log(strNum.length)
-    console.log(Math.log10(Math.abs(numero)))
-    let decimales = 16 - Math.floor(Math.log10(Math.abs(numero))) - 1;
-    if (decimales > 15) {
-      decimales = 15
-    }
-    console.log(decimales)
-    let numeroRedondeado = numero.toFixed(decimales);
-    return numeroRedondeado.replace(/\.?0+$/, "");
-  }
+  // function redondearNumero(numero: number) {
+  //   const strNum = numero.toString()
+  //   console.log(strNum.length)
+  //   console.log(Math.log10(Math.abs(numero)))
+  //   let decimales = 16 - Math.floor(Math.log10(Math.abs(numero))) - 1;
+  //   if (decimales > 15) {
+  //     decimales = 15
+  //   }
+  //   console.log(decimales)
+  //   let numeroRedondeado = numero.toFixed(decimales);
+  //   return numeroRedondeado.replace(/\.?0+$/, "");
+  // }
 
-  let redNum: string = "0"
-  if (number === 0) {
-    redNum = number.toString()
-  } else {
-    const strNum = number.toString()
-    if (!Number.isInteger(number)) {
-      redNum = redondearNumero(number)
-      console.log("redondeando: " + redondearNumero(number))
-    }else if(Number.isInteger(number)&&strNum.length>=16){
-    redNum="desbordamiento"
-    }else{
-      redNum = number.toString()
-      console.log(strNum)
-    }
-  }
+  // let redNum: string = "0"
+  // if (number === 0) {
+  //   redNum = number.toString()
+  // } else {
+  //   const strNum = number.toString()
+  //   if (!Number.isInteger(number)) {
+  //     redNum = redondearNumero(number)
+  //     console.log("redondeando: " + redondearNumero(number))
+  //   }else if(Number.isInteger(number)&&strNum.length>=16){
+  //   redNum="desbordamiento"
+  //   }else{
+  //     redNum = number.toString()
+  //     console.log(strNum)
+  //   }
+  // }
 
   return (
     <div className="calc-box">
-      <div className="result">{redNum}</div>
+      {/* <div className="result">{redNum}</div> */}
       {/* Podemos pasar estado a un componente */}
-      {/* <Component message={prevNumber} /> */}
+      <Component num={number} />
       <div className="prev">{prevNumber}</div>
       {buttons.map((number, index) => (
         <button

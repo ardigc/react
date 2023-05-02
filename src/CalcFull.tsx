@@ -36,24 +36,24 @@ function Calcfull() {
   function clickHandler(num: string, index: number) {
     if (index === 8 || index === 9 || index === 10 || index === 12 || index === 13 || index === 14 || index === 16 || index === 17 || index === 18 || index === 21) {
       console.log(num, index);
-      const num2Arr = num1Arr.push(num)
+      num1Arr.push(num)
       setNumber(parseFloat(num1Arr.join('')))
     } else if (index === 3) {
       console.log(num, index);
-      const num2Arr = num1Arr.pop()
+      num1Arr.pop()
       setNumber(parseFloat(num1Arr.join('')))
     } else if (index === 22) {
       console.log(num, index);
-      const num2Arr = num1Arr.push(".")
+      num1Arr.push(".")
       console.log(num1Arr.join(''))
       setNumber(parseFloat(num1Arr.join('')))
     } else if (index === 20) {
       console.log(num, index);
       if (num1Arr[0] === "-") {
-        const num2Arr = num1Arr.splice(0, 1)
+        num1Arr.splice(0, 1)
         setNumber(parseFloat(num1Arr.join('')))
       } else {
-        const num2Arr = num1Arr.unshift("-")
+        num1Arr.unshift("-")
         console.log(num1Arr.join(''))
         setNumber(parseFloat(num1Arr.join('')))
       }
@@ -170,8 +170,8 @@ function Calcfull() {
       console.log(num, index);
     }
   }
+  
   function redondearNumero(numero: number) {
-
     const strNum = numero.toString()
     console.log(strNum.length)
     console.log(Math.log10(Math.abs(numero)))
@@ -182,8 +182,8 @@ function Calcfull() {
     console.log(decimales)
     let numeroRedondeado = numero.toFixed(decimales);
     return numeroRedondeado.replace(/\.?0+$/, "");
-
   }
+
   let redNum: string = "0"
   if (number === 0) {
     redNum = number.toString()

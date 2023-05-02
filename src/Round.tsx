@@ -30,7 +30,7 @@ function redondear(number:number) {
   }
   return redNum
 }
-export function Component({ num }: { num: number }) {
+export function Round({ num }: { num: number }) {
   return <div className="result">
     {redondear(num)}
   </div>

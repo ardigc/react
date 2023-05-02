@@ -1,6 +1,6 @@
 
 function redondearNumero(numero: number) {
-  const strNum = numero.toString()
+  // const strNum = numero.toString()
   // console.log(strNum.length)
   // console.log(Math.log10(Math.abs(numero)))
   let decimales = 16 - Math.floor(Math.log10(Math.abs(numero))) - 1;

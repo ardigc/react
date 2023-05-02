@@ -30,9 +30,7 @@ const buttons = [
 let num1Arr: string[] = []
 let operation = ""
 let num1: number = 0
-function name(params:type) {
-  
-}
+
 
 function Calcfull() {
   const [number, setNumber] = useState(0);
@@ -62,11 +60,11 @@ function Calcfull() {
         console.log(num1Arr.join(''))
         setNumber(parseFloat(num1Arr.join('')))
       }
-    } else if (index === 2) {
+    } else if (index === 1) {
       console.log(num, index);
       num1Arr = []
       setNumber(0)
-    } else if (index === 1) {
+    } else if (index === 2) {
       console.log(num, index);
       num1Arr = []
       setNumber(0)
@@ -74,34 +72,43 @@ function Calcfull() {
       num1 = 0
     } else if (index === 19) {
       console.log(num, index);
-      num1 = number
-      setPrevNumber(number + "+")
+      const res=result(number);
+      // setNumber(result(number))
+      console.log(res)
+      num1 = res
+      setPrevNumber(num1 + "+")
       num1Arr = []
-      setNumber(0)
+      setNumber(res)
       operation = "+"
       console.log("Operacion: " + operation)
     } else if (index === 15) {
+      const res=result(number);
+      // setNumber(result(number))
       console.log(num, index);
-      num1 = number
-      setPrevNumber(number + "-")
+      num1 = res
+      setNumber(res)
+      setPrevNumber(num1 + "-")
       num1Arr = []
-      setNumber(0)
       operation = "-"
       console.log("Operacion: " + operation)
     } else if (index === 11) {
+      // setNumber(result(number))
       console.log(num, index);
-      num1 = number
-      setPrevNumber(number + "*")
+      const res=result(number);
+      num1 = res
+      setNumber(res)
+      setPrevNumber(num1 + "*")
       num1Arr = []
-      setNumber(0)
       operation = "*"
       console.log("Operacion: " + operation)
     } else if (index === 7) {
+      const res=result(number);
+      // setNumber(result(number))
       console.log(num, index);
-      num1 = number
-      setPrevNumber(number + "/")
+      num1 = res
+      setNumber(res)
+      setPrevNumber(num1 + "/")
       num1Arr = []
-      setNumber(0)
       operation = "/"
       console.log("Operacion: " + operation)
     } else if (index === 4) {
@@ -171,8 +178,25 @@ function Calcfull() {
       console.log("es un simbolo")
       console.log(num, index);
     }
+    function result(number:number) {
+      // const strNum1 = num1.toString()
+      // const strNumber = number.toString()
+      if (operation === "+") {
+        // console.log(num1)
+        return (num1 + number)
+      } else if (operation === "-") {
+        return (num1 - number)
+      } else if (operation === "*") {
+        return (num1 * number)
+      } else if (operation === "/") {
+        return (num1 / number)
+      } else {
+        return number
+      }
+      // setPrevNumber(strNum1 + operation + strNumber + "=")
+      // num1Arr = []
+    }
   }
-
   return (
     <div className="calc-box">
       {/* <div className="result">{redNum}</div> */}

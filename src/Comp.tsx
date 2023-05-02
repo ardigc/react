@@ -1,13 +1,13 @@
 
 function redondearNumero(numero: number) {
   const strNum = numero.toString()
-  console.log(strNum.length)
-  console.log(Math.log10(Math.abs(numero)))
+  // console.log(strNum.length)
+  // console.log(Math.log10(Math.abs(numero)))
   let decimales = 16 - Math.floor(Math.log10(Math.abs(numero))) - 1;
   if (decimales > 15) {
     decimales = 15
   }
-  console.log(decimales)
+  // console.log(decimales)
   let numeroRedondeado = numero.toFixed(decimales);
   return numeroRedondeado.replace(/\.?0+$/, "");
 }
@@ -20,12 +20,12 @@ function redondear(number:number) {
     const strNum = number.toString()
     if (!Number.isInteger(number)) {
       redNum = redondearNumero(number)
-      console.log("redondeando: " + redondearNumero(number))
+      // console.log("redondeando: " + redondearNumero(number))
     }else if(Number.isInteger(number)&&strNum.length>=16){
     redNum="desbordamiento"
     }else{
       redNum = number.toString()
-      console.log(strNum)
+      // console.log(strNum)
     }
   }
   return redNum

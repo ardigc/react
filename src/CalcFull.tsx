@@ -30,6 +30,9 @@ const buttons = [
 let num1Arr: string[] = []
 let operation = ""
 let num1: number = 0
+function name(params:type) {
+  
+}
 
 function Calcfull() {
   const [number, setNumber] = useState(0);
@@ -141,11 +144,9 @@ function Calcfull() {
         setNumber(num1 / porcentaje)
       } else {
         console.log("No hay operacion")
-
       }
       setPrevNumber(strNum1 + operation + strNumber + "%=")
       num1Arr = []
-  
     } else if (index === 23) {
       const strNum1 = num1.toString()
       const strNumber = number.toString()
@@ -163,7 +164,6 @@ function Calcfull() {
         setNumber(num1 / number)
       } else {
         console.log("No hay operacion")
-
       }
       setPrevNumber(strNum1 + operation + strNumber + "=")
       num1Arr = []
@@ -172,35 +172,6 @@ function Calcfull() {
       console.log(num, index);
     }
   }
-  
-  // function redondearNumero(numero: number) {
-  //   const strNum = numero.toString()
-  //   console.log(strNum.length)
-  //   console.log(Math.log10(Math.abs(numero)))
-  //   let decimales = 16 - Math.floor(Math.log10(Math.abs(numero))) - 1;
-  //   if (decimales > 15) {
-  //     decimales = 15
-  //   }
-  //   console.log(decimales)
-  //   let numeroRedondeado = numero.toFixed(decimales);
-  //   return numeroRedondeado.replace(/\.?0+$/, "");
-  // }
-
-  // let redNum: string = "0"
-  // if (number === 0) {
-  //   redNum = number.toString()
-  // } else {
-  //   const strNum = number.toString()
-  //   if (!Number.isInteger(number)) {
-  //     redNum = redondearNumero(number)
-  //     console.log("redondeando: " + redondearNumero(number))
-  //   }else if(Number.isInteger(number)&&strNum.length>=16){
-  //   redNum="desbordamiento"
-  //   }else{
-  //     redNum = number.toString()
-  //     console.log(strNum)
-  //   }
-  // }
 
   return (
     <div className="calc-box">

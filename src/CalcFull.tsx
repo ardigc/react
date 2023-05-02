@@ -32,6 +32,7 @@ let num1: number = 0
 
 function Calcfull() {
   const [number, setNumber] = useState(0);
+  //hooq
   const [prevNumber, setPrevNumber] = useState("");
   function clickHandler(num: string, index: number) {
     if (index === 8 || index === 9 || index === 10 || index === 12 || index === 13 || index === 14 || index === 16 || index === 17 || index === 18 || index === 21) {

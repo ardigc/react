@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Component } from "./Comp";
 
 const buttons = [
   "%",
@@ -204,6 +205,8 @@ function Calcfull() {
   return (
     <div className="calc-box">
       <div className="result">{redNum}</div>
+      {/* Podemos pasar estado a un componente */}
+      {/* <Component message={prevNumber} /> */}
       <div className="prev">{prevNumber}</div>
       {buttons.map((number, index) => (
         <button

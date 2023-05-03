@@ -5,6 +5,7 @@ import { CalcNum } from "./CalcNum";
 import { CalcSymbol } from "./CalcSymbol";
 import { CalcRes } from "./calcRes";
 import { CalcRem } from "./CalcRem";
+import { CalcComa } from "./CalcComa";
 
 // const buttons = [
 //   "%",
@@ -36,7 +37,7 @@ import { CalcRem } from "./CalcRem";
 
 function Calcfull() {
   let [operation, setOperation] = useState("")
-  let [num1, setNum1]= useState(0)
+  let [num1, setNum1] = useState(0)
   let [num1Arr, setNum1Arr] = useState([])
 
   const [number, setNumber] = useState(0);
@@ -186,55 +187,55 @@ function Calcfull() {
   //     console.log("es un simbolo")
   //     console.log(num, index);
   //   }
-    function result(number:number, op:string) {
-      const strNum1 = num1.toString()
-      const strNumber = number.toString()
+  function result(number: number, op: string) {
+    const strNum1 = num1.toString()
+    const strNumber = number.toString()
 
-      if (operation === "+") {
-        // console.log(num1)
-        return (num1 + number)
-      } else if (op === "-") {
-        return (num1 - number)
-      } else if (op === "x") {
-        return (num1 * number)
-      } else if (op === "/") {
-        return (num1 / number)
-      } else {
-        return number
-      }
-      setPrevNumber(strNum1 + operation + strNumber + "=")
-      num1Arr = []
+    if (operation === "+") {
+      // console.log(num1)
+      return (num1 + number)
+    } else if (op === "-") {
+      return (num1 - number)
+    } else if (op === "x") {
+      return (num1 * number)
+    } else if (op === "/") {
+      return (num1 / number)
+    } else {
+      return number
     }
+    setPrevNumber(strNum1 + operation + strNumber + "=")
+    num1Arr = []
+  }
   // }
   return (
     <div className="calc-box">
-      
+
       {/* Podemos pasar estado a un componente */}
       <Round num={number} />
       <div className="prev">{prevNumber}</div>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="%" num1={num1} number={number}/>
-      <CalcRem  num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="CE" setNum1Arr={setNum1Arr} setNum1={setNum1} />
-      <CalcRem  num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="C" setNum1Arr={setNum1Arr} setNum1={setNum1} />
-      <CalcRem  num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="<-" setNum1Arr={setNum1Arr} setNum1={setNum1} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1/x" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x^2" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="√x" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="%" num1={num1} number={number} />
+      <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="CE" setNum1Arr={setNum1Arr} setNum1={setNum1} />
+      <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="C" setNum1Arr={setNum1Arr} setNum1={setNum1} />
+      <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="<-" setNum1Arr={setNum1Arr} setNum1={setNum1} />
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1/x" num1={num1} number={number} />
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x^2" num1={num1} number={number} />
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="√x" num1={num1} number={number} />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="4"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="5"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="6"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="4" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="5" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="6" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="-" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="1"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="2"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="3"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="1" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="2" />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="3" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" number={number} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number}/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="0"/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="," num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number} />
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="0" />
+      <CalcComa setNumber={setNumber} num1Arr={num1Arr} simb="," />
       <CalcRes num1={num1} resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="=" number={number} />
       {/* {buttons.map((number, index) => (
         <button

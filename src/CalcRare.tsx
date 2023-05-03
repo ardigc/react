@@ -10,7 +10,7 @@ export function CalcRare(props: { setNumber: any; number: number; setPrevNumber:
             setPrevNumber("sqr(" + number + ")")
             num1Arr = []
             setNumber(number * number)
-        } else if (simb==="+/-") {
+        } else if (simb === "+/-") {
             setNumber(-number)
         } else {
             setPrevNumber("sqrt(" + number + ")")

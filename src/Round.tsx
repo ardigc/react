@@ -12,7 +12,7 @@ function redondearNumero(numero: number) {
   return numeroRedondeado.replace(/\.?0+$/, "");
 }
 
-function redondear(number:number) {
+function redondear(number: number) {
   let redNum: string = "0"
   if (number === 0) {
     redNum = number.toString()
@@ -21,9 +21,9 @@ function redondear(number:number) {
     if (!Number.isInteger(number)) {
       redNum = redondearNumero(number)
       // console.log("redondeando: " + redondearNumero(number))
-    }else if(Number.isInteger(number)&&strNum.length>=16){
-    redNum="desbordamiento"
-    }else{
+    } else if (Number.isInteger(number) && strNum.length >= 16) {
+      redNum = "desbordamiento"
+    } else {
       redNum = number.toString()
       // console.log(strNum)
     }

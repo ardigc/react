@@ -219,13 +219,13 @@ function Calcfull() {
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="4" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="5" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="6" num1={num1} number={number}/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="-" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="2" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="3" num1={num1} number={number}/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="0" num1={num1} number={number}/>

@@ -7,7 +7,7 @@ export function CalcSymbol(props: { setNum1Arr: any;setNum1: any ;setNumber: any
       // setNumber(result(number))
       setNum1(res)
       setNumber(res)
-      setPrevNumber(res + "/")
+      setPrevNumber(res + simb)
       setNum1Arr([])
       setOperation(simb)
       }

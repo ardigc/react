@@ -6,6 +6,7 @@ import { CalcSymbol } from "./CalcSymbol";
 import { CalcRes } from "./calcRes";
 import { CalcRem } from "./CalcRem";
 import { CalcComa } from "./CalcComa";
+import { CalcRare } from "./CalcRare";
 
 // const buttons = [
 //   "%",
@@ -192,7 +193,6 @@ function Calcfull() {
     const strNumber = number.toString()
 
     if (operation === "+") {
-      // console.log(num1)
       return (num1 + number)
     } else if (op === "-") {
       return (num1 - number)
@@ -217,9 +217,9 @@ function Calcfull() {
       <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="CE" setNum1Arr={setNum1Arr} setNum1={setNum1} />
       <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="C" setNum1Arr={setNum1Arr} setNum1={setNum1} />
       <CalcRem num1Arr={num1Arr} setPrevNumber={setPrevNumber} setOperation={setOperation} setNumber={setNumber} simb="<-" setNum1Arr={setNum1Arr} setNum1={setNum1} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1/x" num1={num1} number={number} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x^2" num1={num1} number={number} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="√x" num1={num1} number={number} />
+      <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="1/x" />
+      <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="x^2" />
+      <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="√x" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" number={number} />
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7" />
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8" />

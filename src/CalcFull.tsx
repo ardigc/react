@@ -233,7 +233,7 @@ function Calcfull() {
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="2" />
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="3" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" number={number} />
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number} />
+      <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="+/-" />
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="0" />
       <CalcComa setNumber={setNumber} num1Arr={num1Arr} simb="," />
       <CalcRes num1={num1} resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="=" number={number} />

@@ -15,12 +15,12 @@ export function CalcButton(props: { setNumber: any; simb: any }){
               setNumber(num1 * porcentaje)
             } else if (operation === "/") {
               console.log(num, index);
-              setNumber(num1 / porcentaje)
+              setNumber( num1 / porcentaje)
             } else {
               console.log("No hay operacion")
             }
             setPrevNumber(strNum1 + operation + strNumber + "%=")
-            num1Arr = []
+            // num1Arr = []
     return <button className="buttons">
         {simb}
     </button>

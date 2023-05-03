@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Round } from "./Round";
 import { CalcButton } from "./CalcButton";
-import { CalcNum } from "./calcNum";
+import { CalcNum } from "./CalcNum";
+import { CalcSymbol } from "./CalcSymbol";
 
 const buttons = [
   "%",
@@ -182,24 +183,24 @@ function Calcfull() {
   //     console.log("es un simbolo")
   //     console.log(num, index);
   //   }
-  //   function result(number:number) {
-  //     // const strNum1 = num1.toString()
-  //     // const strNumber = number.toString()
-  //     if (operation === "+") {
-  //       // console.log(num1)
-  //       return (num1 + number)
-  //     } else if (operation === "-") {
-  //       return (num1 - number)
-  //     } else if (operation === "*") {
-  //       return (num1 * number)
-  //     } else if (operation === "/") {
-  //       return (num1 / number)
-  //     } else {
-  //       return number
-  //     }
-      // setPrevNumber(strNum1 + operation + strNumber + "=")
-      // num1Arr = []
-    // }
+    function result(number:number) {
+      const strNum1 = num1.toString()
+      const strNumber = number.toString()
+      if (operation === "+") {
+        // console.log(num1)
+        return (num1 + number)
+      } else if (operation === "-") {
+        return (num1 - number)
+      } else if (operation === "*") {
+        return (num1 * number)
+      } else if (operation === "/") {
+        return (num1 / number)
+      } else {
+        return number
+      }
+      setPrevNumber(strNum1 + operation + strNumber + "=")
+      num1Arr = []
+    }
   // }
   return (
     <div className="calc-box">
@@ -214,7 +215,7 @@ function Calcfull() {
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1/x" num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x^2" num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="√x" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" num1={num1} number={number}/>
+      <CalcSymbol resFunct={result} operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" num1={num1} number={number}/>
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7"/>
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9"/>

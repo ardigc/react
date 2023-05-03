@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Round } from "./Round";
+import { CalcButton } from "./CalcButton";
 
 const buttons = [
   "%",
@@ -205,6 +206,7 @@ function Calcfull() {
       {/* Podemos pasar estado a un componente */}
       <Round num={number} />
       <div className="prev">{prevNumber}</div>
+      <CalcButton setNumber={setNumber} simb="%"/>
       {buttons.map((number, index) => (
         <button
           key={index}

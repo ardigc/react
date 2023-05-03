@@ -219,16 +219,16 @@ function Calcfull() {
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
       <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x" num1={num1} number={number}/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="4"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="5"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="6"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="-" num1={num1} number={number}/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="1"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="2"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="3"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number}/>
-      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="0" num1={num1} number={number}/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="0"/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="," num1={num1} number={number}/>
       <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="=" num1={num1} number={number}/>
       {/* {buttons.map((number, index) => (

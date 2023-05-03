@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Round } from "./Round";
 import { CalcButton } from "./CalcButton";
+import { CalcNum } from "./calcNum";
 
 const buttons = [
   "%",
@@ -206,8 +207,31 @@ function Calcfull() {
       {/* Podemos pasar estado a un componente */}
       <Round num={number} />
       <div className="prev">{prevNumber}</div>
-      <CalcButton setNumber={setNumber} simb="%"/>
-      {buttons.map((number, index) => (
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="%" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="CE" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="C" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="<-" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1/x" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x^2" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="√x" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" num1={num1} number={number}/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8"/>
+      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9"/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="4" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="5" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="6" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="-" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="1" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="2" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="3" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+/-" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="0" num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="," num1={num1} number={number}/>
+      <CalcButton operation={operation} num1Arr={num1Arr} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="=" num1={num1} number={number}/>
+      {/* {buttons.map((number, index) => (
         <button
           key={index}
           className={"numer-" + index+" buttons"}
@@ -215,7 +239,7 @@ function Calcfull() {
         >
           {number}
         </button>
-      ))}
+      ))} */}
     </div>
   );
 }

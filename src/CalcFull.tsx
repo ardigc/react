@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Round } from "./Round";
-import { CalcButton } from "./CalcButton";
+import { CalcButton } from "components/buttons/CalcButton";
 import { CalcNum } from "./CalcNum";
 import { CalcSymbol } from "./CalcSymbol";
 import { CalcRes } from "./calcRes";
@@ -9,9 +9,9 @@ import { CalcComa } from "./CalcComa";
 import { CalcRare } from "./CalcRare";
 
 function Calcfull() {
-  let [operation, setOperation] = useState("")
-  let [num1, setNum1] = useState(0)
-  let [num1Arr, setNum1Arr] = useState([])
+  const [operation, setOperation] = useState("")
+  const [num1, setNum1] = useState(0)
+  const [num1Arr, setNum1Arr] = useState<string>('')
 
   const [number, setNumber] = useState(0);
   const [prevNumber, setPrevNumber] = useState("");
@@ -19,21 +19,29 @@ function Calcfull() {
   function result(number: number, op: string) {
     const strNum1 = num1.toString()
     const strNumber = number.toString()
-
+    let result;
     if (operation === "+") {
-      return (num1 + number)
+      result = (num1 + number)
     } else if (op === "-") {
-      return (num1 - number)
+      result = (num1 - number)
     } else if (op === "x") {
-      return (num1 * number)
+      result = (num1 * number)
     } else if (op === "/") {
-      return (num1 / number)
+      result = (num1 / number)
     } else {
-      return number
+      result = number
     }
     setPrevNumber(strNum1 + operation + strNumber + "=")
-    num1Arr = []
+    setNum1Arr('')
+    return result
   }
+
+  const clickHandlerCreator = (simb: string) => {
+    return () => {
+      setNumber(parseFloat(num1Arr + simb))
+    }
+  }
+
   return (
     <div className="calc-box">
       <Round num={number} />
@@ -46,20 +54,20 @@ function Calcfull() {
       <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="x^2" />
       <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="√x" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="/" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="7" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="8" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="9" />
+      <CalcNum fn={clickHandlerCreator} simb="7" />
+      <CalcNum fn={clickHandlerCreator} simb="8" />
+      <CalcNum fn={clickHandlerCreator} simb="9" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="x" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="4" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="5" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="6" />
+      <CalcNum fn={clickHandlerCreator} simb="4" />
+      <CalcNum fn={clickHandlerCreator} simb="5" />
+      <CalcNum fn={clickHandlerCreator} simb="6" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="-" number={number} />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="1" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="2" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="3" />
+      <CalcNum fn={clickHandlerCreator} simb="1" />
+      <CalcNum fn={clickHandlerCreator} simb="2" />
+      <CalcNum fn={clickHandlerCreator} simb="3" />
       <CalcSymbol resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="+" number={number} />
       <CalcRare setPrevNumber={setPrevNumber} number={number} setNumber={setNumber} num1Arr={num1Arr} simb="+/-" />
-      <CalcNum setNumber={setNumber} num1Arr={num1Arr} simb="0" />
+      <CalcNum fn={clickHandlerCreator} simb="0" />
       <CalcComa setNumber={setNumber} num1Arr={num1Arr} simb="," />
       <CalcRes num1={num1} resFunct={result} setNum1Arr={setNum1Arr} setNum1={setNum1} operation={operation} setOperation={setOperation} setPrevNumber={setPrevNumber} setNumber={setNumber} simb="=" number={number} />
     </div>

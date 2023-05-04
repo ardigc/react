@@ -23,20 +23,20 @@ function Calc() {
   //   setResult(number1 / number2)
   // }
 
-  const suma = number1  + number2
-  const rest = number1  - number2
-  const mult = number1  * number2
-  const div = number1  / number2
+  const suma = number1 + number2
+  const rest = number1 - number2
+  const mult = number1 * number2
+  const div = number1 / number2
 
   return <div>
     <span style={{ fontSize: '2rem' }}>{suma}</span>
     {/* {show === "resta" && <span style={{ fontSize: '2rem' }}>{rest}</span>} */}
     <input type='number' onChange={changeHandler1} value={number1} />
     <input type='number' onChange={changeHandler2} value={number2} />
-<span>Suma: {suma}</span>
-<span> Resta: {rest}</span>
-<span> Multiplicacion: {mult}</span>
-<span> Division: {div}</span>
+    <span>Suma: {suma}</span>
+    <span> Resta: {rest}</span>
+    <span> Multiplicacion: {mult}</span>
+    <span> Division: {div}</span>
     {/* <button onClick={clickHandlerSum}>Sumar</button>
     <button onClick={clickHandlerRes}>Restar</button>
     <button onClick={clickHandlerMult}>Multiplicar</button>
